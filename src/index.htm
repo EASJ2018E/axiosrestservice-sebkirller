@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>HTTP methods in TypeScript</title>
+  <link rel="stylesheet" type="text/css" href="bundle.css">
+</head>
+
+<body>
+  <h1>Axios HTTP in TypeScript</h1>
+
+  <div>
+    Choose a server endpoint: <br>
+    <select name="endpoint" id="server">
+      <option value="https://restcustomerservice20181007065419.azurewebsites.net/api/Customers/">Azure HTTPS</option>
+      <option value="http://restcustomerservice20181007065419.azurewebsites.net/api/Customers/">Azure HTTP</option>
+      <option value="https://localhost:5001/api/Customers/">Localhost HTTPS</option>
+      <option value="http://localhost:5000/api/Customers/">Localhost HTTP</option>
+    </select>
+  </div>
+
+  <div>
+    <h2>List of customers</h2>
+    <button id="getAllButton"> Get all customers </button>
+    <table>
+      <thead>
+        <th>ID:</th>
+        <th>First name:</th>
+        <th>Last name:</th>
+        <th>Year:</th>
+      </thead>
+      <tbody id="customerTable"></tbody>
+    </table>
+  </div>
+
+  <div>
+    <h2>Post customer</h2>
+    <input type="number" name="Id" id="customerId" placeholder="Id"> <br>
+    <input type="text" name="First name" id="customerFirstName" placeholder="First name"> <br>
+    <input type="text" name="Last name" id="customerLastName" placeholder="Last name"> <br>
+    <input type="number" name="Year" id="customerYear" placeholder="Year"> <br>
+    <button id="postCustomer">Post customer</button>
+  </div>
+
+  <div>
+    <h2>Put customer</h2>
+    <input type="number" name="Id" id="putId" placeholder="Id"> <br>
+    <input type="text" name="First name" id="putCustomerFirstName" placeholder="First name"> <br>
+    <input type="text" name="Last name" id="putCustomerLastName" placeholder="Last name"> <br>
+    <input type="number" name="Year" id="putCustomerYear" placeholder="Year"> <br>
+    <button id="putCustomer">Put customer</button>
+  </div>
+
+  <div>
+    <h2>Delete customer</h2>
+    <input type="number" name="Id" id="deleteId" placeholder="Id"> <br>
+    <button id="deleteCustomer"> Delete customer </button>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>
